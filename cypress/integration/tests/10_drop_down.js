@@ -1,5 +1,5 @@
-///<reference types="cypress"/>
-/// <reference types="cypress-xpath" />
+/////<reference types="cypress"/>
+///// <reference types="cypress-xpath" />
 
 import Login_Page from "../pages/Login_Page"
 describe('login functionality', () => {

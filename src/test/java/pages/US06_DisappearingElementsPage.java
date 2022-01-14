@@ -19,9 +19,11 @@ public class US06_DisappearingElementsPage {
     @FindBy(xpath = "//ul/li/a")
     public List<WebElement> disappearingElementsMenuList;
 
+    
+    @FindBy(xpath = "//a[.='Gallery']")
+    public WebElement galleryElement;
+
    
-    @FindBy(xpath = "(//ul/li)[1]")
-    public WebElement home;
 
 
     @FindBy(xpath = "//h1")
