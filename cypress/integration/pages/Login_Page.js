@@ -1,4 +1,4 @@
-///<reference types="cypress"/>
+//////<reference types="cypress"/>
 
 class Login_Page {
 
@@ -8,6 +8,7 @@ class Login_Page {
     }
     click(sira){
         const webElement= cy.get("li:nth-child("+sira+") > a")
+      //  webElement.should('be.visible')
         webElement.click()
         return this
     }

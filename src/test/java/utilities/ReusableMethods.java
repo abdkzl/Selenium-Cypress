@@ -208,4 +208,15 @@ public class ReusableMethods {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
+
+    public static boolean isExist(WebElement element) {
+        boolean b;
+        try {
+            b = element.isDisplayed() || !element.isDisplayed();
+        } catch (Exception var3) {
+            b = false;
+        }
+
+        return b;
+    }
 }

@@ -18,11 +18,20 @@ import './commands'
 
 require('cypress-xpath')
 
-//require('cypress-xpath')
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-require('cypress-xpath')
+const app = window.top;
 
-import './commands';
+if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+  const style = app.document.createElement('style');
+  style.innerHTML =
+    '.command-name-request, .command-name-xhr { display: none }';
+  style.setAttribute('data-hide-command-log-request', '');
+
+  app.document.head.appendChild(style);
+}
+
+
