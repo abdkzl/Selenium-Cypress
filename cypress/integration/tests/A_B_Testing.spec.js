@@ -1,7 +1,7 @@
 import *as A_B_TestingPage from '..//pages/A_B_TestingPage.spec'
 
 describe("A/B Test", ()=>{
-  A_B_TestingPage().login =new A_B_TestingPage();
+ 
     it('Verify the title and description', () => {
         // Page Object Model'a gore yapildi. Export ve import kullanildi.
         const descriptionExpText="\n    Also known as split testing. This is a way in which businesses are able to simultaneously test and learn different versions of a page to see which text and/or functionality works best towards a desired outcome (e.g. a user action such as a click-through)."
