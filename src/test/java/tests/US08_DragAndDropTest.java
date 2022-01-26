@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import pages.US08_DragAndDropPage;
 import pages.HomePage;
-//import utilities.ConfigurationReader;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -17,10 +17,10 @@ public class US08_DragAndDropTest {
 
     @Test
     public void drogAndDrop() {
-        hp.clik_On_Subpages(11);  //1.yol
-        // Driver.getDriver().get(ConfigurationReader.getProperty("url"));   //2.yol
-        // ReusableMethods.waitForPageToLoad(10);
-        // dp.dragAndDropButton.click();
+      //  hp.clik_On_Subpages(11);  //1.yol
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));   //2.yol
+        ReusableMethods.waitForPageToLoad(10);
+        dp.dragAndDropButton.click();
 
         ReusableMethods.waitFor(5);
         Assert.assertEquals(dp.columnA.getText(), "A");
