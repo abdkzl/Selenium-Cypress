@@ -9,7 +9,7 @@ public class dropdown {
     HomePage hp = new HomePage();
     @Test
     public void droganddrop(){
-    hp.clik_On_Subpages(10);
+   // hp.clik_On_Subpages(10);
     hp.dropdowElement.click();
     System.out.println(hp.dropdown_options.size());
     Assert.assertEquals(hp.dropdown_options.size(), 3);
