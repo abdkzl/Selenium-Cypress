@@ -40,4 +40,10 @@ public class HomePage {
         options.get(sira).click();
     }
 
+    @FindBy(xpath = "//input")
+    public WebElement slider;
+
+    @FindBy(xpath = "//span[@id='range']")
+    public WebElement slider_value;
+
 }
