@@ -1,6 +1,6 @@
 package pages;
 
-import java.util.List;
+
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,10 +14,6 @@ public class US08_DragAndDropPage {
 
     @FindBy(xpath = "//a[.='Drag and Drop']")
     public WebElement dragAndDropButton;
-
-
-    // @FindBy(xpath = "//h3")
-    // public WebElement title;
     
     @FindBy(xpath = "//div[@id='column-a']")
     public WebElement columnA;
