@@ -26,9 +26,7 @@ context('Drag and Drop',()=>{
 
     })
 
-
-
-    it('Drag and Drop 2.yol', ()=>{
+   it('Drag and Drop 2.yol', ()=>{
         // 1) Terminalden: npm install --save-dev @4tw/cypress-drag-drop
         // 2) import '@4tw/cypress-drag-drop' //support commands.js
        
