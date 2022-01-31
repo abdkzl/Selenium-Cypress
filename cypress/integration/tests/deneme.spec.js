@@ -1,19 +1,20 @@
-import *as A_B_TestingPage from '..//pages/A_B_TestingPage.spec'
+
 
 describe("A/B Test", ()=>{
- 
     it('Verify the title and description', () => {
-        // Page Object Model'a gore yapildi. Export ve import kullanildi.
+        const url="https://the-internet.herokuapp.com/"
+        const titleXpath="//h3"
+        const descriptionXpath="//p"
+        const abTestLinkXpath="//*[@href='/abtest']"
+        
         const descriptionExpText="\n    Also known as split testing. This is a way in which businesses are able to simultaneously test and learn different versions of a page to see which text and/or functionality works best towards a desired outcome (e.g. a user action such as a click-through)."
-        A_B_TestingPage.visitPage()
-
-        cy.get(A_B_TestingPage.abTestLinkCSS).click({force:true})
-        
+        cy.visit(url)
+        cy.xpath(abTestLinkXpath).click()
+        //cy.location().should('eq','https')
         cy.url().should('eq','https://the-internet.herokuapp.com/abtest')
-        
     
         //cy.xpath(titleXpath).should('have.text','A/B Test Variation 1')|| cy.xpath(titleXpath).should('have.text','A/B Test Control')
-        cy.get(A_B_TestingPage.descriptionCSS).should('have.text',A_B_TestingPage.descriptionExpText)
+        cy.xpath(descriptionXpath).should('have.text',descriptionExpText)
         
     });
     it('assert that "Elemental Selenium" AND "Fork me on GitHub" are clickable', () => {
