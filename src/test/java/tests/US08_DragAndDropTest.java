@@ -17,7 +17,9 @@ public class US08_DragAndDropTest {
 
     @Test
     public void drogAndDrop() {
-        //hp.clik_On_Subpages(11);  //1.yol
+
+      //  hp.clik_On_Subpages(11);  //1.yol
+
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));   //2.yol
         ReusableMethods.waitForPageToLoad(10);
         dp.dragAndDropButton.click();

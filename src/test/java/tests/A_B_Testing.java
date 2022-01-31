@@ -100,7 +100,7 @@ public class A_B_Testing {
     
             //Window handle
             String currentWindowHandle=Driver.getDriver().getWindowHandle();
-            Set<String> allWindowHandels=Driver.driver.getWindowHandles();
+            Set<String> allWindowHandels=Driver.getDriver().getWindowHandles();
             System.out.println(allWindowHandels.size());
             for (String handle:allWindowHandels
                  ) {
