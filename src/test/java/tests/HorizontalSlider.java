@@ -55,16 +55,112 @@ public class HorizontalSlider extends JFrame {
             hp.slider.sendKeys(Keys.ARROW_LEFT);
             ReusableMethods.waitFor(1);
         }
+        
+    }
+    
+
+    @Test
+    public void aaa(){
+setSlider(hp.slider, hp.slider_value, -60);
 
     }
 
+
+
+public void aa(){
+    int point = -60;
+            
+   // for (int i = 0; i < values.size(); i++) {
+        
+        action.dragAndDropBy(hp.slider,-60,0).perform();
+        Assert.assertEquals(hp.slider_value.getText(), values.get(0));
+        point = point+10;
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,-45,0).perform();
+        System.out.println(hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(1));
+        
+        ReusableMethods.waitFor(2);
+        point = point+10;
+        
+        action.dragAndDropBy(hp.slider,-30,0).perform();
+        System.out.println("sda" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(2));
+        
+        ReusableMethods.waitFor(2);
+        point = point+10;
+        
+        action.dragAndDropBy(hp.slider,-20,0).perform();
+        System.out.println("sdasa" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(3));
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,-10,0).perform();
+        System.out.println("sdasasdf" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(4));
+        
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,0,0).perform();
+        System.out.println("sdasasdfdf" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(5));
+        
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,10,0).perform();
+        System.out.println("sdasasdfdfdfg" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(6));
+        
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,20,0).perform();
+        System.out.println("sdasasdfdfdfgdfgh" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(7));
+        
+        
+        ReusableMethods.waitFor(2);
+        action.dragAndDropBy(hp.slider,40,0).perform();
+        System.out.println("sdasasdfdfdfgdfghdf" + hp.slider_value.getText());
+        Assert.assertEquals(hp.slider_value.getText(), values.get(8));
+        
+        
+        
+        
+        System.out.println("sdasasdfdfdfgdfghdf" + hp.slider_value.getText());
+
+        ReusableMethods.waitFor(2);
+    //}
+}
+
+public static void setSlider(WebElement slider, WebElement output, int target) {
+    Actions actions = new Actions(Driver.getDriver());
+    ReusableMethods.waitFor(1);
+
+    actions.clickAndHold(slider).perform();
+
+    while (true) {
+        int value = Integer.parseInt(output.getAttribute("value"));  //25
+
+        if (value == target) break;
+
+        if (value > target) {
+            actions.sendKeys(Keys.ARROW_LEFT).perform();
+            //System.out.println("value_left = " + value);
+        } else {
+            actions.sendKeys(Keys.ARROW_RIGHT).perform();
+            // System.out.println("value_right = " + value);
+        }}
+    }
+
+   // ReusableMethods.setSlider(sliderPage.sliderButton,sliderPage.sliderValue,10);
     @Test
     public void mouseMove()  {
-
+        
         // mouse saga giderken
         // for (int i = 0; i < values.size(); i++) {
-
-       
+           
+       ReusableMethods.waitFor(20);
 /*
 
         JSlider aJSlider = new JSlider();
@@ -79,7 +175,6 @@ public class HorizontalSlider extends JFrame {
 
         System.out.println(aJSlider.getValue());
         // Assert.assertEquals(hp.slider_value.getText(), values.get(i));
-        // action.dragAndDropBy(hp.slider,0,0).perform();
         ReusableMethods.waitFor(1);
         // }
         ReusableMethods.waitFor(5);
