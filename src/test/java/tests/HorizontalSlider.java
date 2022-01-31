@@ -10,14 +10,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
