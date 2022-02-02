@@ -45,7 +45,7 @@ class LoginPage_WithCredential {
 
 
     }
-    message() {
+    loggedAssertion() {
         cy.get("#flash").should('include.text', 'You logged into a secure area!')
         cy.get("#flash").invoke('text').then((textmessage) => {
             cy.log(textmessage)
@@ -84,7 +84,9 @@ class LoginPage_WithCredential {
     }
 
     cssAssertion(){
-        cy.get("radius").trigger('mouseover').should('have.css','color','rgb(133, 133, 133)) ')
+        cy.get(".radius").should('have.css','background-color','rgb(43, 166, 203)')
+        cy.get(".radius").trigger('mouseover').should('have.css','box-shadow','rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset')
+        cy.get(".radius").should('have.css','background-color','rgb(43, 166, 203)')
     }
 
 

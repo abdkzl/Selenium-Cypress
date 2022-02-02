@@ -32,7 +32,7 @@ it("Login wiht valid credential",()=>{
 
 it("verify the logged page message and the webpage name",()=>{
     
-    loginPage.message()
+    loginPage.loggedAssertion()
 
 })
 
