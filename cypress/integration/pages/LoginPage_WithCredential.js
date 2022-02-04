@@ -1,7 +1,6 @@
 //////<reference types="cypress"/>
 
-const username = "tomsmith"
-const password = "SuperSecretPassword!"
+
 
 
 class LoginPage_WithCredential {
@@ -83,10 +82,12 @@ class LoginPage_WithCredential {
 
     }
 
-    cssAssertion(){
-        cy.get(".radius").should('have.css','background-color','rgb(43, 166, 203)')
-        cy.get(".radius").trigger('mouseover').should('have.css','box-shadow','rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset')
-        cy.get(".radius").should('have.css','background-color','rgb(43, 166, 203)')
+    cssAssertion() {
+
+        //  cy.get(".radius").trigger('mouseover').click()
+        cy.get(".radius").should('have.css', 'background-color', 'rgb(43, 166, 203)')
+        cy.get(".radius").trigger('mouseover').pause().should('have.css', 'box-shadow', 'rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset')
+        cy.get(".radius").should('have.css', 'background-color', 'rgb(43, 166, 203)')
     }
 
 

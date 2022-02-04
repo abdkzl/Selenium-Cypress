@@ -16,7 +16,7 @@ it("verify the page name",()=>{
 
 })
 
-it.only("Login butonunun uzerine gelindiginde renginin degistigini dogrual",()=>{
+it("Login butonunun uzerine gelindiginde renginin degistigini dogrual",()=>{
     loginPage.visit()
     loginPage.cssAssertion()
 })
